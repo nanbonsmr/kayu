@@ -4,17 +4,17 @@
     "slug": "kayu",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/icon.svg",
     "scheme": "kayu",
     "userInterfaceStyle": "dark",
     "splash": {
-      "image": "./assets/images/icon.png",
+      "image": "./assets/icon.svg",
       "resizeMode": "contain",
       "backgroundColor": "#080810"
     },
     "ios": {
       "bundleIdentifier": "com.kayu.photoeditor",
-      "icon": "./assets/images/icon.png",
+      "supportsTablet": true,
       "infoPlist": {
         "NSCameraUsageDescription": "Kayu needs camera access to take photos for editing.",
         "NSPhotoLibraryUsageDescription": "Kayu needs gallery access to import and save photos.",
@@ -24,21 +24,36 @@
     },
     "android": {
       "package": "com.kayu.photoeditor",
+      "versionCode": 1,
+      "useNextNotificationFormat": true,
+      "permissions": [
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "ACCESS_MEDIA_LOCATION"
+      ],
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/icon.png",
+        "foregroundImage": "./assets/icon.svg",
         "backgroundColor": "#080810"
       },
       "intentFilters": [
         {
           "action": "VIEW",
-          "data": [{ "scheme": "kayu" }],
-          "category": ["BROWSABLE", "DEFAULT"]
+          "data": [
+            {
+              "scheme": "kayu"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
         }
       ]
     },
     "web": {
       "output": "static",
-      "favicon": "./assets/images/icon.png"
+      "favicon": "./assets/icon.svg"
     },
     "plugins": [
       "expo-router",
@@ -63,7 +78,9 @@
       "typedRoutes": true
     },
     "extra": {
-      "router": {},
+      "router": {
+        "origin": false
+      },
       "eas": {
         "projectId": "06d9467a-e227-4181-94b0-0eb350aa31f2"
       }
