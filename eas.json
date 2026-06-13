@@ -25,6 +25,10 @@
     }
   },
   "submit": {
-    "production": {}
+    "production": {
+      "android": {
+        "serviceAccount": "@key.json"
+      }
+    }
   }
 }
