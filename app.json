@@ -4,11 +4,11 @@
     "slug": "kayu",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.svg",
+    "icon": "./assets/icon.png",
     "scheme": "kayu",
     "userInterfaceStyle": "dark",
     "splash": {
-      "image": "./assets/icon.svg",
+      "image": "./assets/icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#080810"
     },
@@ -33,7 +33,7 @@
         "ACCESS_MEDIA_LOCATION"
       ],
       "adaptiveIcon": {
-        "foregroundImage": "./assets/icon.svg",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#080810"
       },
       "intentFilters": [
@@ -53,7 +53,7 @@
     },
     "web": {
       "output": "static",
-      "favicon": "./assets/icon.svg"
+      "favicon": "./assets/icon.png"
     },
     "plugins": [
       "expo-router",
